@@ -38,6 +38,5 @@ I added a little **responsive** to the project, so it can be usable on your smar
 
 --
 
-
 Marion
 
