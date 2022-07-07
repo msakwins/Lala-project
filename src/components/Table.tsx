@@ -40,7 +40,7 @@ const Table: React.FC<TableProps> = ({ paymentsData }) => {
             <p>NAME</p>
             <button
               type="button"
-              onClick={() => handleSort('customerName', sortingRule === 'ASC' ? 'DSC' : 'ASC')}
+              onClick={() => handleSort('name', sortingRule === 'ASC' ? 'DSC' : 'ASC')}
             >
               <Image src={arrow} width='12' height='12' className="arrow-button__name" alt="sort"></Image>
             </button>
