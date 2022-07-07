@@ -1,12 +1,14 @@
 # Lala project
 
-### First, clone the project:
+### Setup the project
+
+#### First, clone the project:
 
 ```bash
 git clone https://github.com/msakwins/Lala-project.git
 ```
 
-### Then, run the development server:
+#### Then, run the development server:
 
 ```bash
 yarn
