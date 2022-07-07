@@ -6,7 +6,7 @@
 git clone https://github.com/msakwins/Lala-project.git
 ```
 
-###Then, run the development server:
+### Then, run the development server:
 
 ```bash
 yarn
@@ -15,6 +15,8 @@ yarn
 ```bash
 yarn dev
 ```
+
+## About the Lala project:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
