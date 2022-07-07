@@ -36,6 +36,8 @@ I added a little **responsive** to the project, so it can be usable on your smar
 
 **Testing**: Je n'ai ajouté que des tests unitaires pour l'instant, en attendant de me familiariser avec react-testing-library
 
+--
+
 
 Marion
 
