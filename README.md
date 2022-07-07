@@ -1,6 +1,6 @@
-#Lala project
+# Lala project
 
-###First, clone the project:
+### First, clone the project:
 
 ```bash
 git clone https://github.com/msakwins/Lala-project.git
