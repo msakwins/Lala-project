@@ -70,19 +70,19 @@ const TableRow = ({payment, index, className,}: TableRowProps) => {
         <table className="details">
           <tbody>
             <tr className="details__row">
-              <th className="details__row-head">ID Paiement :</th>
+              <th className="details__row-head">Payment id :</th>
               <td className="details__row-cell">{paymentDetails.id}</td>
             </tr>
             <tr>
-              <th>Date de création :</th>
+              <th>Created :</th>
               <td>{moment(new Date(paymentDetails.created)).format("DD/MM/YYYY")}</td>
             </tr>
             <tr>
-              <th>Montant :</th>
+              <th>Amount :</th>
               <td>{paymentDetails.amount && formatAmount(paymentDetails.amount)}</td>
             </tr>
             <tr className="details__row plan-details">
-              <th>Plan de paiement :</th>
+              <th>Payment plan :</th>
               <td>
                 <table className="plan">
                   <thead className="plan__head">
