@@ -24,11 +24,11 @@ type TableRowProps = {
       fee: number;
     };
   }
-  index: number
-  className: string
+  index: number;
+  className: string;
 }
 
-const TableRow = ({payment, index, className}: TableRowProps) => {
+const TableRow = ({payment, index, className,}: TableRowProps) => {
   const [openedRow, setOpenedRow] = useState<number>(-1);
   const [paymentDetails, setPaymentDetails] = useState<any>({});
 
@@ -40,17 +40,20 @@ const TableRow = ({payment, index, className}: TableRowProps) => {
       });
     setOpenedRow(openedRow === index ? -1 : index)
   };
-
+  
   const paymentPlanDetails = paymentDetails.paymentPlan;
 
   const formatAmount = (amount: number) => {
     return ((amount / 100).toLocaleString("fr-FR", {style:"currency", currency:"EUR"}));
   };
 
+  const openClickedRow = (openedRow === index);
+  const statusColor = payment.status;
+
   return (
-    <TableRowWrapper open={index === openedRow} className={`${className}`}>
+    <TableRowWrapper openClickedRow={openedRow === index} className={`${className}`}>
       <td className="dashboard__body-row--cell cell_status">
-        <Status statusColor={payment.status} />
+        <Status statusColor={statusColor} />
         {payment.status}
       </td>
       <td className="dashboard__body-row--cell">
@@ -63,7 +66,7 @@ const TableRow = ({payment, index, className}: TableRowProps) => {
       </td>
       <td>
 
-        { index === openedRow &&
+        { openClickedRow &&
         <table className="details">
           <tbody>
             <tr className="details__row">

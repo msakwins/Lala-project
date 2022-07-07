@@ -1,15 +1,20 @@
 import styled from "styled-components"
 
-const TableRowWrapper = styled.tr`
+interface TableRowWrapperProps {
+  openClickedRow?: boolean;
+	statusColor?: string;
+}
+
+const TableRowWrapper = styled.tr<TableRowWrapperProps>`
 	position: relative;
 	border: none;
 	background-color: rgba(243, 247, 248, 0.6);
 	display: flex;
 	flex-direction: row;
 	height: 40px;
-	height: ${({ open }) => open && '100%'};
-	justify-content: ${({ open }) => open && 'flex-start'};
-	align-items: ${({ open }) => open && 'flex-start'};
+	height: ${({ openClickedRow }) => openClickedRow && '100%'};
+	justify-content: ${({ openClickedRow }) => openClickedRow && 'flex-start'};
+	align-items: ${({ openClickedRow }) => openClickedRow && 'flex-start'};
 	flex-wrap: wrap;
 
 	@media (max-width: 768px) {
@@ -37,7 +42,7 @@ const TableRowWrapper = styled.tr`
 		height: 40px;
 		
 		:not(:first-child) :not(:last-child) {
-			height: ${({ open }) => open ? '20px' : '40px'};
+			height: ${({ openClickedRow }) => openClickedRow ? '20px' : '40px'};
 		}
 
 		.mobile_status {
@@ -49,14 +54,14 @@ const TableRowWrapper = styled.tr`
 			flex-direction: row;
 			align-items: center;
 			justify-content: flex-start;
-			display: ${({ open }) => open ? 'flex' : 'none'};
 			width: 50%;
+			display: ${({ openClickedRow }) => openClickedRow ? 'flex' : 'none'};
 
 			:nth-child(-n + 2) {
 				display: flex;
 			}
 
-			:last-child {
+			:nth-last-child(2) {
 				display: flex;
 			}
 

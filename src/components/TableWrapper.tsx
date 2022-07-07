@@ -1,6 +1,11 @@
 import styled from "styled-components"
+interface TableWrapperProps {
+  rotateButton?: boolean;
+  openClickedRow?: boolean;
+  dataType?: string;
+}
 
-const TableWrapper = styled.table`
+const TableWrapper = styled.table<TableWrapperProps>`
 	display: table;
 	width: 100%;
 	height: 100%;
@@ -40,7 +45,7 @@ const TableWrapper = styled.table`
           padding: 10px;
 
           @media (max-width: 768px) {
-            display: ${({ open }) => open ? 'flex' : 'none'};
+            display: ${({ openClickedRow }) => openClickedRow ? 'flex' : 'none'};
   
             :nth-child(-n + 2) {
               display: flex;
@@ -52,13 +57,13 @@ const TableWrapper = styled.table`
           }
           
           .arrow-button__name {
-            transform: ${({ rotate, dataType }) => rotate && dataType === 'name' && 'rotate(180deg)'};
+            transform: ${({ rotateButton, dataType }) => rotateButton && dataType === 'name' && 'rotate(180deg)'};
             position: relative;
             cursor: pointer;
           }
 
           .arrow-button__status {
-            transform: ${({ rotate, dataType }) => rotate && dataType === 'status' && 'rotate(180deg)'};
+            transform: ${({ rotateButton, dataType }) => rotateButton && dataType === 'status' && 'rotate(180deg)'};
             position: relative;
             cursor: pointer;
           }

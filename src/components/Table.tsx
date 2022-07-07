@@ -6,10 +6,10 @@ import arrow from '../../public/arrow.svg';
 import sortData from '../utils/sort';
 
 type TableProps = {
-  paymentsData: string[];
+  paymentsData?: string[];
 }
 
-const Table = ({paymentsData}: TableProps) => {
+const Table: React.FC<TableProps> = ({ paymentsData }) => {
   const [sortingType, setSortingType] = useState<string>('');
   const [sortingRule, setSortingRule] = useState<string>('');
   
@@ -18,10 +18,13 @@ const Table = ({paymentsData}: TableProps) => {
   const handleSort = (type:string, rule:string) => {
     setSortingType(type);
     setSortingRule(rule);
+    console.log(sortingRule);
   }
 
+  const rotateButton = (sortingRule === 'ASC' ? false : true);
+
   return (
-    <TableWrapper cellSpacing="0" rotate={sortingRule === 'ASC' ? 0 : 1} className="dashboard">
+    <TableWrapper cellSpacing="0" rotateButton={rotateButton} className="dashboard">
       <thead className="dashboard__head">
         <tr className="dashboard__head-row">
           <th className="dashboard__head-row--cell">
@@ -53,8 +56,13 @@ const Table = ({paymentsData}: TableProps) => {
         </tr>
       </thead>
       <tbody className="dashboard-body">
-        {sortedPayments.map((payment:string[], index:number) =>
-          <TableRow payment={payment} key={index} index={index} className='dashboard__body-row' />
+        {sortedPayments.map((payment, index:number) =>
+          <TableRow
+            payment={payment}
+            key={index}
+            index={index}
+            className='dashboard__body-row'
+          />
         )}
       </tbody>
     </TableWrapper>
