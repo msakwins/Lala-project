@@ -22,7 +22,7 @@ Open http://localhost:3000 with your browser to see the result.
 
 ## About the Lala project:
 
-I designed a **user-friendly** payment tracking page, simulating a real website page (with fake Header, Breadcrumb..) including a big <Table> component that **displays a list a payments** fetched from the API.
+I designed a **user-friendly** payment tracking page, simulating a real website page (with fake Header, Breadcrumb..) including a big <Table> component that displays a list a payments fetched from the API.
 Every payment can be opened to show more details by clicking the eye; in this new section we can find the payment details fetched by id The payments can be sorted by status or customer_name
 I added a little responsive to the project, so it can be usable on your smartphone.
 
