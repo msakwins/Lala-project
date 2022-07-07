@@ -32,9 +32,9 @@ I added a little **responsive** to the project, so it can be usable on your smar
 
 #### A propos de ce projet quelques difficultés que j'ai rencontrées:
 
-**Typescript**: J'ai eu du mal à typer les variables et il reste des erreurs que je n'ai pas réussi à corriger.
+*Typescript*: J'ai eu du mal à typer les variables et il reste des erreurs que je n'ai pas réussi à corriger.
 
-**Testing**: Je n'ai ajouté que des tests unitaires pour l'instant, en attendant de me familiariser avec react-testing-library
+*Testing*: Je n'ai ajouté que des tests unitaires pour l'instant, en attendant de me familiariser avec react-testing-library
 
 --
 
