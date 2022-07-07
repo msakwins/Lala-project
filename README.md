@@ -1,6 +1,4 @@
-# Lala project
-
-### Setup the project
+## Setup the project
 
 #### First, clone the project:
 
